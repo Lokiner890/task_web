@@ -2,11 +2,11 @@ import {App} from '../app';
 import {User} from './namespace';
 
 export enum types {
-  FETCH_CURRENT = 'USER/FETCH_CURRENT',
+  FETCH_DETAIL = 'USER/FETCH_DETAIL',
 
-  UPDATE_CURRENT = 'USER/UPDATE_CURRENT',
+  UPDATE_DETAIL = 'USER/UPDATE_DETAIL',
 
-  END_FETCH_CURRENT = 'USER/END_FETCH_CURRENT',
+  END_FETCH_DETAIL = 'USER/END_FETCH_DETAIL',
 }
 
 export type UserState = {
@@ -16,10 +16,10 @@ export type UserState = {
   current: User.Detail | null;
 };
 
-export type FetchCurrentAsync = App.BaseAction<typeof types.FETCH_CURRENT>;
-export type UpdateCurrentAsync = App.BaseAction<
-  typeof types.UPDATE_CURRENT,
-  User.ReqUpdateCurrent
+export type FetchDetailAsync = App.BaseAction<typeof types.FETCH_DETAIL>;
+export type UpdateDetailAsync = App.BaseAction<
+  typeof types.UPDATE_DETAIL,
+  User.ReqUpdateDetail
 >;
 
-export type UserActionTypes = FetchCurrentAsync | UpdateCurrentAsync;
+export type UserActionTypes = FetchDetailAsync | UpdateDetailAsync;

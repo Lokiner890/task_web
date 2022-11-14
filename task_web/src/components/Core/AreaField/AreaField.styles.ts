@@ -74,7 +74,6 @@ export const Area = styled.textarea<TInputProps>`
   resize: none;
 
   &::placeholder {
-    font-family: Mulish, sans-serif;
     font-weight: ${FontWeights.light};
 
     color: ${({theme, color}) => theme.text.gray};

@@ -8,8 +8,6 @@ import {AppRouter} from '@/routes';
 import {store} from './store';
 import {createGlobalStyle} from 'styled-components';
 
-import 'slick-carousel/slick/slick.css';
-
 //TODO: FONTS
 export const GlobalStyles = createGlobalStyle`
   *, *::after, *::before {

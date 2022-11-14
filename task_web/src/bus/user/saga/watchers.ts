@@ -6,11 +6,11 @@ import {types} from '../types';
 import {fetchCurrent, updateCurrent} from './workers';
 
 function* watchFetchCurrent(): SagaIterator {
-  yield takeEvery(types.FETCH_CURRENT, fetchCurrent);
+  yield takeEvery(types.FETCH_DETAIL, fetchCurrent);
 }
 
 function* watchUpdateCurrent(): SagaIterator {
-  yield takeEvery(types.UPDATE_CURRENT, updateCurrent);
+  yield takeEvery(types.UPDATE_DETAIL, updateCurrent);
 }
 
 export function* watchUser(): SagaIterator {

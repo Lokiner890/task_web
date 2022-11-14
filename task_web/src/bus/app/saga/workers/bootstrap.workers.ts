@@ -16,12 +16,12 @@ export function* bootstrap(): SagaIterator {
     yield all([
       // put(authActions.fetchTokenAsync()),
       // put(profileActions.fetchSavedItemsAsync()),
-      put(userActions.fetchCurrentAsync()),
+      // put(userActions.fetchCurrentAsync()),
     ]);
     yield all([
       //   take(authTypes.END_FETCH_TOKEN),
       //   take(profileTypes.END_FETCH_SAVED_ITEMS),
-      take(userTypes.END_FETCH_CURRENT),
+      // take(userTypes.END_FETCH_CURRENT),
     ]);
   } catch (e) {
     console.log(`error bootstrap worker ${e}`);

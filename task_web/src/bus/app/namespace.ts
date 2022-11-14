@@ -7,6 +7,4 @@ export namespace App {
   export type Image = {
     url: string;
   };
-
-  export type MenuItems = 'Home' | 'Profile' | 'Settings' | 'Team' | 'Projects';
 }

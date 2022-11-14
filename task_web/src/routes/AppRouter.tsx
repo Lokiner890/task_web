@@ -1,13 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
+import { Route, Routes } from 'react-router-dom';
+import { Routes as RouteNames } from './Routes';
 
-import {Route, Routes} from 'react-router-dom';
+import { appActions, appSelectors } from '@/bus/app';
+import { authSelectors } from '@/bus/auth';
 
-
-import {appActions, appSelectors} from '@/bus/app';
-import {authSelectors} from '@/bus/auth';
-
-import {useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from '@/components';
+import { Empty } from '@/pages';
+import { AuthRouter } from './AuthRouter';
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -32,7 +34,14 @@ export const AppRouter = () => {
 
   return (
     <Routes>
-
+      <Route
+        path={RouteNames.AUTH_ROUTER}
+        element={false ? <Redirect to={'PROJECTS'} /> : <AuthRouter />}
+      />
+      <Route
+        path={RouteNames.}
+        element={true ? <Redirect to={'TO_SIGN_IN'} /> : <Empty />}
+      />
     </Routes>
   );
 };

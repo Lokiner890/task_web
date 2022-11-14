@@ -6,22 +6,23 @@ import {apiAuth} from '../../api';
 import {AxiosResponse} from 'axios';
 import {Auth} from '../../namespace';
 import {authActions} from '../../slice';
+import {userActions} from '@/bus/user';
 
 export function* signIn(action: SignInAsync): SagaIterator {
   try {
-    yield put(uiActions.toggleLoader({name: 'auth', loading: true}));
+    yield put(uiActions.toggleLoader({name: 'sign_in', loading: true}));
 
     const response: AxiosResponse<Auth.ResSignIn> = yield call(
       apiAuth.signIn,
       action.payload,
     );
 
-    yield all([put(authActions.toggleLogged(true))]);
+    yield put(authActions.toggleLogged(true));
 
-    console.log(response.data);
+    // yield put(userActions.fetchDetailAsync());
   } catch (e) {
     console.log(`error sign in worker ${e}`);
   } finally {
-    yield put(uiActions.toggleLoader({name: 'auth', loading: false}));
+    yield put(uiActions.toggleLoader({name: 'sign_in', loading: false}));
   }
 }

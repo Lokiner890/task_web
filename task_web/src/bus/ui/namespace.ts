@@ -1,5 +1,5 @@
 export namespace Ui {
-  export type FormName = 'auth' | 'logout' | 'user' | 'project' | 'team';
+  export type FormName = 'sign_in' | 'sign_up';
 
   export type Loader = {
     name: FormName;

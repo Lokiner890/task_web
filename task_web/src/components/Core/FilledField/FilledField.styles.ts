@@ -43,7 +43,7 @@ export const Label = styled.p`
 `;
 
 export const Content = styled.div<TContentProps>`
-  background: ${({color, theme}) => theme.input.background[color]};
+  background: ${({color, theme}) => theme.input.background.default};
   height: ${({height}) => height}px;
 
   transition: 500ms background;
@@ -76,7 +76,6 @@ export const Input = styled.input<TInputProps>`
   font-size: 14px;
 
   &::placeholder {
-    font-family: Mulish, sans-serif;
     font-weight: ${FontWeights.light};
 
     color: ${({theme, color}) => theme.text.gray};

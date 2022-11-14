@@ -4,7 +4,7 @@ const pallete: Pallete = {
   background: {
     default:
       'linear-gradient(125.15deg, rgba(217, 188, 34, 0.03) 21.96%, rgba(255, 255, 255, 0) 105.42%)',
-    action: '#F6D41F',
+    action: '#D3BD45',
     light: '#fff',
     dark: '#171B16',
     gray: '#D9D9D9A0',
@@ -14,13 +14,13 @@ const pallete: Pallete = {
   text: {
     default: '#484B73',
     secondary: '#7A7BBB',
-    link: '#9EB2E4',
+    link: '#05A3D4',
     danger: '#D63333',
     gray: '#484B7380',
     light: '#fff',
     dark: '#171B16',
     action: '#D9BC22',
-    light_action: '#F6D41F',
+    light_action: '#D3BD45',
   },
   icon: {
     default: '#171B16',
@@ -28,7 +28,7 @@ const pallete: Pallete = {
   },
   button: {
     background: {
-      default: '#F6D41F',
+      default: '#D3BD45',
       dark: '#171B16',
       danger: '#D63333',
     },
@@ -38,7 +38,7 @@ const pallete: Pallete = {
       danger: '#fff',
     },
     border: {
-      default: '#F6D41F',
+      default: '#D3BD45',
       dark: '#140F07',
       danger: '#D63333',
     },
@@ -54,12 +54,12 @@ const pallete: Pallete = {
     },
     text: {
       default: '#171B16',
-      danger: '#fff',
+      danger: '#D63333',
     },
   },
   border: {
     default: '#171B16',
-    action: '#F6D41F',
+    action: '#D3BD45',
   },
 };
 

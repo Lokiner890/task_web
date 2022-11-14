@@ -83,6 +83,7 @@ export const FilledField: FC<TProps> = ({
         return 16;
     }
   }, [variant]);
+  console.log(error);
 
   return (
     <Wrapper width={width} margin={margin}>
@@ -99,7 +100,7 @@ export const FilledField: FC<TProps> = ({
 
         {rightIcon && <Icon>{rightIcon}</Icon>}
       </Content>
-      {!errorEmpty && <ErrorText>{error?.message || ''}</ErrorText>}
+      {error?.message && <ErrorText>{error?.message || ''}</ErrorText>}
     </Wrapper>
   );
 };

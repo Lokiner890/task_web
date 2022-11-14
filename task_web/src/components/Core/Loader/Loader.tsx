@@ -1,4 +1,6 @@
-import {LogoIcon} from '@/components';
+import React from 'react';
+
+// import {LogoIcon} from '@/components';
 import {FC} from 'react';
 import {Wrapper} from './Loader.styles';
 
@@ -9,7 +11,7 @@ type TProps = {
 export const Loader: FC<TProps> = ({size = 192}) => {
   return (
     <Wrapper size={size}>
-      <LogoIcon color="default" size={size} />
+      {/* <LogoIcon color="default" size={size} /> */}
     </Wrapper>
   );
 };
