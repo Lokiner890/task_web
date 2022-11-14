@@ -61,7 +61,7 @@ export const SignInPage = () => {
           </InputWrapper>
           <Footer>
             <SubmitWrapper>
-              <Link to={Routes.TO_SIGN_UP}>Forgot password?</Link>
+              <Link to={Routes.TO_SIGN_UP}>Sign Up</Link>
               <Button onClick={handleSubmit} width="100px" weight="medium">
                 Login
               </Button>

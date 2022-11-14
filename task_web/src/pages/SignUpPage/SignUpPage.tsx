@@ -94,7 +94,7 @@ export const SignUpPage = () => {
           </InputWrapper> */}
           <Footer>
             <SubmitWrapper>
-              <Link to={Routes.TO_SIGN_IN}>Forgot password?</Link>
+              <Link to={Routes.TO_SIGN_IN}>Sign In</Link>
               <Button onClick={handleSubmit} width="100px" weight="medium">
                 Sign Up
               </Button>
